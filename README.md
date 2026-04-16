@@ -45,6 +45,3 @@ API 示例：
 - `GET /api/resume` — 返回 JSON 简历
 - `GET /api/bookmarks` — 返回收藏列表
 - `POST /api/bookmarks` — 添加收藏（JSON body: {"title":"...","url":"..."}）
-
-注意：该后端为示例用途，文件写入使用本地 `data/*.json`，适合个人使用或开发测试。如需生产部署或数据库支持，我可以帮你改造为更安全的实现。
-
