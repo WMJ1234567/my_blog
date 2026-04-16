@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>证书管理 — MyTech</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="site">
+    <nav class="nav"><div class="brand">MyTech</div><ul class="menu"><li><a href="index.html">首页</a></li><li><a href="resume.html">简历</a></li><li><a href="bookmarks.html">收藏</a></li></ul></nav>
+    <main class="content">
+      <section id="certsPage" class="card">
+        <h2>证书管理</h2>
+        <p class="muted">在此页面上传证书图片，上传后会自动添加到简历页面的证书列表。</p>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+          <input id="certsTitle" placeholder="证书标题（可选，若选多文件则作为每项默认标题）" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:transparent;min-width:220px">
+          <input id="certsFileInput" type="file" accept="image/*" multiple style="display:none">
+          <button id="chooseCertsBtn" class="btn ghost">选择图片（可多选）</button>
+          <button id="uploadCertsBtn" class="btn">上传并添加</button>
+          <a class="btn" href="resume.html">返回简历</a>
+        </div>
+        <div id="certsPageList" style="display:flex;gap:12px;flex-wrap:wrap"></div>
+      </section>
+    </main>
+    <footer class="foot">© 2026 MyTech</footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

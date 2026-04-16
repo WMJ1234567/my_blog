@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>收藏夹 — MyTech</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="site">
+    <nav class="nav"><div class="brand">MyTech</div><ul class="menu"><li><a href="index.html">首页</a></li><li><a href="resume.html">简历</a></li><li><a href="bookmarks.html" class="active">收藏</a></li></ul></nav>
+    <main class="content">
+      <section class="card">
+        <h2>我的收藏</h2>
+        <div id="bmGroups" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;margin-bottom:14px">
+          <!-- buttons injected by JS -->
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px">
+          <input id="bmNewName" placeholder="名称，例如：ChatGPT" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);min-width:180px">
+          <input id="bmNewUrl" placeholder="链接，例如：https://chatgpt.com/" style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);min-width:280px">
+          <button id="addBmBtn" class="btn">添加到当前分类</button>
+        </div>
+        <div id="bmList" style="display:flex;flex-direction:column;gap:10px"></div>
+      </section>
+    </main>
+    <footer class="foot">© 2026 MyTech</footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

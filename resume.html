@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>简历 — MyTech</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="site">
+    <nav class="nav"><div class="brand">MyTech</div><ul class="menu"><li><a href="index.html">首页</a></li><li><a href="resume.html" class="active">简历</a></li><li><a href="bookmarks.html">收藏</a></li></ul></nav>
+    <main class="content">
+      <section class="card resume-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div style="display:flex;gap:12px;align-items:center">
+            <img id="avatarImg" src="/icons/resume.svg" alt="avatar" style="width:84px;height:84px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.06)">
+            <div>
+              <h1>吴铭君</h1>
+              <p class="muted">13313880165 · m133138801651@outlook.com</p>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <a class="btn" href="/uploads/resume.docx" download>下载 Word 简历</a>
+            <div style="display:inline-block;position:relative;margin-left:8px">
+              <button id="bgToggleBtn" class="btn ghost">背景</button>
+              <div id="bgPicker" style="display:none;position:absolute;right:0;top:36px;background:rgba(0,0,0,0.6);padding:8px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.4);z-index:40;display:flex;flex-wrap:wrap;gap:8px;width:320px;">
+                <!-- swatches inserted by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <label style="display:flex;gap:8px;align-items:center">
+            <input id="avatarInput" type="file" accept="image/*" style="display:none">
+            <button id="changeAvatarBtn" class="btn ghost">更换头像</button>
+          </label>
+        </div>
+
+        <h3>学术背景</h3>
+        <p>2020.9 - 2026.6 泉州师范学院，计算机科学与技术</p>
+        <p class="muted">主修课程：C++、Java、MySQL 数据库、机器学习、计算机网络</p>
+        <p class="muted">2020.9-2022.9（武警部队）</p>
+
+        <h3>专业技能</h3>
+        <ul>
+          <li><strong>编程语言：</strong>熟练掌握 Java、C/C++；熟悉 Python（NumPy、Pandas）</li>
+          <li><strong>游戏开发：</strong>熟练使用 Unity3D，熟悉场景、Animator、UGUI 与组件化架构</li>
+          <li><strong>Web 开发：</strong>后端：Spring Boot；数据库：MySQL；前端：HTML5/CSS3/JavaScript（ES6+）</li>
+          <li><strong>AI 与语音：</strong>大模型 API（DeepSeek），讯飞星火语音识别与合成（TTS），UnityWebRequest 与 JSON 解析</li>
+          <li><strong>工具：</strong>Git、IntelliJ IDEA、VS Code、Unity Editor、了解 Maven、使用过禅道</li>
+          <li><strong>计算机基础：</strong>扎实的数据结构与算法、计算机组成原理、操作系统与计算机网络</li>
+        </ul>
+
+        <h3>竞赛与项目经历</h3>
+        <ul>
+          <li><strong>2024 中国机器人及人工智能大赛：</strong>基于 YOLO（COCO128）训练目标检测，使用深度摄像头与标注工具，实现超市物品识别并驱动机械臂抓取。</li>
+          <li><strong>2024 全国海洋航行器设计与制作大赛：</strong>基于 Unity 开发智能体控制系统，训练 YOLO 实现目标检测与自主决策。</li>
+          <li><strong>2025 中国大学生计算机设计大赛：</strong>基于 Unity3D 开发古代器械教育游戏，集成 DeepSeek 与讯飞星火，实现语音/文本问答与历史记录查询。</li>
+          <li><strong>智能图像处理系统（个人项目）：</strong>Python + OpenCV 实现多种图像处理功能，使用 Tkinter 提供 GUI 与实时参数调节。</li>
+          <li><strong>毕业设计：</strong>基于 Unity3D 的古代器械物理模拟与交互系统，集成大模型与语音合成，实现智能问答与交互学习。</li>
+        </ul>
+
+        <h3>奖项与证书</h3>
+        <ul>
+          <li>2024 年福建“锐智杯”大学生智能设计大赛一等奖</li>
+          <li>2024 年中国机器人及人工智能大赛全国总决赛二等奖</li>
+          <li>2024 年全国海洋航行器设计与制作大赛（海峡区）二等奖</li>
+          <li>2025 年中国大学生计算设计大赛福建三等奖</li>
+        </ul>
+
+        <h3>证书图片</h3>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px">
+          <a class="btn ghost" href="certs.html" id="manageCertsBtn">管理证书</a>
+        </div>
+
+        <div id="certList" style="display:flex;gap:12px;flex-wrap:wrap"></div>
+      </section>
+    </main>
+    <footer class="foot">© 2026 MyTech</footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
