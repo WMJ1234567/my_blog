@@ -23,35 +23,6 @@ cd d:\\vscode_my\\myblog
 .\package.ps1
 ```
 
-部署建议：
-
-- 快速：把仓库推到 GitHub，启用 GitHub Pages（`main` 分支，Root 或 `docs/`）。
-- 更专业：使用 `gh-pages` 分支或 Netlify / Vercel 做自动部署。
-
-需要我帮你把这个目录初始化为 Git 仓库并生成 GitHub Pages 的部署脚本/步骤吗？
-
-自动初始化与部署脚本：
-
-- `init-and-deploy.ps1` — 在本地初始化 git，并（若安装 `gh`）使用 GitHub CLI 创建仓库并推送到 GitHub。
-- `.github/workflows/deploy.yml` — GitHub Actions 工作流：当你把代码推送到 `main` 分支时，自动部署到 GitHub Pages。
-
-使用示例（PowerShell，已在 `myblog` 目录）：
-
-```powershell
-# 初始化并在 GitHub 上创建远端仓库（需要 gh）
-.\init-and-deploy.ps1 -RepoName mytech-blog -Public
-
-# 或者手动：
-git init
-git add .
-git commit -m "Initial commit"
-# 在 GitHub 创建仓库后：
-git remote add origin https://github.com/USERNAME/REPO.git
-git push -u origin main
-```
-
-注意：GitHub Actions 工作流依赖 `main` 分支触发，请确保你的默认分支为 `main` 并已推送到 GitHub。若想改为 `gh-pages` 或其他部署方式，我可以帮你调整工作流。
-
 本地后端（可选）
 -----------------
 
@@ -75,5 +46,4 @@ API 示例：
 - `GET /api/bookmarks` — 返回收藏列表
 - `POST /api/bookmarks` — 添加收藏（JSON body: {"title":"...","url":"..."}）
 
-注意：该后端为示例用途，文件写入使用本地 `data/*.json`，适合个人使用或开发测试。如需生产部署或数据库支持，我可以帮你改造为更安全的实现。
-
+注意：该后端为示例用途，文件写入使用本地 `data/*.json`，适合个人使用或开发测试。
